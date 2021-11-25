@@ -1,0 +1,8 @@
+import "hashes/sha256/512bitPacked" as sha256packed
+
+def main(private field preA, private field preB, private field preC, private field preD, field hashA, field hashB) -> bool:
+
+    field[2] hash = sha256packed([preA, preB, preC, preD])
+
+    bool out = if hashA == hash[0] && hashB == hash[1] then true else false fi
+    return out    
