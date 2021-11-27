@@ -13,11 +13,10 @@ Setup
     Here is my truffle version information:
 
     $ truffle version
-    Truffle v5.1.31 (core: 5.1.31)
+    Truffle v5.4.17 (core: 5.4.17)
     Solidity v0.5.16 (solc-js)
-    Node v10.24.1
-    Web3.js v1.2.1
-
+    Node v12.22.1
+    Web3.js v1.5.3
 
 
 Demo Installation
