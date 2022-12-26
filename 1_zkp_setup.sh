@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
-echo "Verifier Command sequence..."
+echo "Setup Command sequence..."
 echo "Compile circuit..."
-cd Verifier/
+cd ./Setup/
 zokrates compile --ztf -i sha256.zok
 
 echo 
@@ -16,8 +16,8 @@ zokrates export-verifier
 echo 
 echo "Give Circuit and Proving Key (PK) to Prover"
 cd ..
-cp Verifier/proving.key Prover/
-cp Verifier/sha256.zok Prover/
+cp ./Setup/proving.key ./Prover/
+cp ./Setup/sha256.zok  ./Prover/
 
 echo "Give Verifier contract to truffle"
-cp Verifier/verifier.sol SmartContract/contracts/
+cp ./Setup/verifier.sol ./VerifierContract/contracts/

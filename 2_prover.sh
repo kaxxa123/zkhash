@@ -2,7 +2,7 @@
 
 echo "Prover Command sequence..."
 echo "Compile circuit"
-cd Prover/
+cd ./Prover/
 zokrates compile -i sha256.zok
 
 echo
@@ -16,4 +16,4 @@ zokrates generate-proof
 echo
 echo "Pass proof to Verifier contract"
 cd ..
-cp Prover/proof.json SmartContract/test/
+cp ./Prover/proof.json  ./VerifierContract/test/

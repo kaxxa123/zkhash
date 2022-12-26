@@ -3,16 +3,15 @@
 echo "Initializing Demo"
 echo "Deleting all intermediate files."
 
-rm -rf ./Verifier
-rm -rf ./Prover
-rm SmartContract/contracts/verifier.sol
-rm SmartContract/test/proof.json
-rm -rf ./SmartContract/build
+shopt -s extglob
+cd ./Setup   &&  rm -rf  !(.gitignore)  && cd ..
+cd ./Prover  &&  rm -rf  !(.gitignore)  && cd ..
 
-mkdir Verifier
-mkdir Prover
+rm ./VerifierContract/contracts/verifier.sol
+rm ./VerifierContract/test/proof.json
+rm -rf ./VerifierContract/build
 
-cp sha256.zok Verifier/
+cp sha256.zok  ./Setup/
 
 echo "Ready!"
 

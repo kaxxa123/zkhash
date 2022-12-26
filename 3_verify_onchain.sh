@@ -2,7 +2,7 @@
 
 echo "Smart Contract Verification..."
 
-cd SmartContract/
+cd ./VerifierContract/
 truffle compile
 truffle test
 cd ..
